@@ -5,6 +5,19 @@ for( i=1; i<=100; i++){
 }
 
 
+const listaBombe=[];
+
+ for (i=1; i<16; i++){
+    generatoreBombe();
+
+ }
+
+console.log(generatoreBombe)
+
+
+
+ const bomba = generatoreBombe(listaBombe,1,16);
+ listaBombe .push (generatoreBombe);
 
 
 
@@ -20,11 +33,7 @@ for( i=1; i<=100; i++){
 
 
 
-
-
-
-
-
+/*funzione per creare quadrati e al click aggiunge o togle la class bg-color*/ 
 function creaGriglia(){
 
     const quadratoGrglia = document.createElement('div');
@@ -39,4 +48,11 @@ function creaGriglia(){
    
     quadratoGrglia.append([i]);
     grigliaDom.append(quadratoGrglia); 
+}
+
+/*funzione per generare numeri random*/
+
+function generatoreBombe( min,max){
+    
+    return Math.floor(Math.random() * ( max - min + 1)) + min
 }
