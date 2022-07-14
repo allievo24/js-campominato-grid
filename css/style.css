@@ -3,14 +3,29 @@
     margin: 0;
     box-sizing: border-box;
 }
+img{
+    height: 100%;
+}
 
+.destra, .sinistra{
+    height: 80px;
+    display: flex;
+    padding: 0rem 5rem;
+    align-items: center;
+}
 
 
 body{
     background-color: aqua;
 
 }
+header{
+    display: flex;
+    background-color: aliceblue;
+    justify-content: space-between;
+    
 
+}
 
 #griglia{
  border: 2px solid black;
