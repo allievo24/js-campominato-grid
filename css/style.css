@@ -6,7 +6,8 @@
 
 
 
-#container{
+body{
+    background-color: aqua;
 
 }
 
@@ -31,5 +32,5 @@
 }
 
 .bg-color{
-    background-color: aqua;
+    background-color: rgb(132, 0, 255);
 }
