@@ -2,20 +2,20 @@ const grigliaDom = document.getElementById('griglia');
 const Inizia = document.getElementById('play');
 Inizia.addEventListener('click',
     function () {
-        const difficoltà = document.getElementById('Difficoltà').value;
+        const difficoltà = parseInt(document.getElementById('Difficoltà').value);
 
         switch (difficoltà) {
-            case Facile:
+            case 1:
             default:
                 quadratoGriglia = 100;
                 break;
 
-            case Medio:
+            case 2:
                 quadratoGriglia = 80;
 
                 break;
 
-            case Difficile:
+            case 3:
                 quadratoGriglia = 49;
 
                 break;
@@ -24,23 +24,26 @@ Inizia.addEventListener('click',
     }
 
 
-)
+);   
 
 
 for (i = 1; i <= 100; i++) {
     creaGriglia();
 }
-/**** */
+/**** creo numeri a caso e verifico che siano univoci*/
 const listaBombe = [];
 
-for (i = 1; i < 16; i++) {
-    const bomba = generatoreBombe(1, 16);
+for (i = 1; i<=16; i++) {
+    const bomba = generatoreBombe(1, 100);
+    if(listaBombe.includes(bomba)==false)
     listaBombe.push(bomba);
+    
 }
 console.log(listaBombe);
+//console.log(bomba);
+
+
 /******************************/
-
-
 
 
 
@@ -62,12 +65,17 @@ function creaGriglia() {
         function () {
             this.classList.toggle('bg-color')
             console.log(this.innerHTML);
+           // this.innerHTML=bomba;
 
         }
     );
 
     quadratoGrglia.append([i]);
     grigliaDom.append(quadratoGrglia);
+    
+    
+   
+
 
 
 
