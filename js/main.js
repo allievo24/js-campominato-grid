@@ -32,7 +32,7 @@ for (i = 1; i <= 100; i++) {
 }
 /**** creo numeri a caso e verifico che siano univoci*/
 const listaBombe = [];
-
+let bomba;
 for (i = 1; i<=16; i++) {
     const bomba = generatoreBombe(1, 100);
     if(listaBombe.includes(bomba)==false)
@@ -40,7 +40,7 @@ for (i = 1; i<=16; i++) {
     
 }
 console.log(listaBombe);
-//console.log(bomba);
+console.log(bomba);
 
 
 /******************************/
@@ -63,6 +63,16 @@ function creaGriglia() {
     quadratoGrglia.classList.add('quadrato');
     quadratoGrglia.addEventListener('click',
         function () {
+            if (listaBombe.includes(i)){
+                alert('seifinito su una bom')
+            }else{
+                alert('sei ancora in gio')
+            }
+            
+            
+            
+            
+            
             this.classList.toggle('bg-color')
             console.log(this.innerHTML);
            // this.innerHTML=bomba;
